@@ -1,11 +1,11 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: mypod
+  name: thepod
 spec:
   containers:
   - image: mcr.microsoft.com/oss/nginx/nginx:1.15.5-alpine
-    name: mypod
+    name: thepod
     resources:
       requests:
         cpu: 100m
