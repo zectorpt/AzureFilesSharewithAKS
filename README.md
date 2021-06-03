@@ -29,4 +29,6 @@ kubectl create secret generic azure-secret --from-literal=azurestorageaccountnam
 
 # Mount file share as an inline volume
 ## Create a yaml azure-files-pod.yaml  
-kubectl apply -f azure-files-pod.yaml
+kubectl apply -f https://raw.githubusercontent.com/zectorpt/AzureFilesSharewithAKS/main/azure-files-pod.yaml
+
+
