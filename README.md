@@ -1,9 +1,9 @@
 # AzureFilesSharewithAKS
 # Change these four parameters as needed for your own environment
-AKS_PERS_STORAGE_ACCOUNT_NAME=mystorageaccount$RANDOM
-AKS_PERS_RESOURCE_GROUP=myAKSShare
-AKS_PERS_LOCATION=eastus
-AKS_PERS_SHARE_NAME=aksshare
+AKS_PERS_STORAGE_ACCOUNT_NAME=mystorageaccount$RANDOM  
+AKS_PERS_RESOURCE_GROUP=myAKSShare  
+AKS_PERS_LOCATION=eastus  
+AKS_PERS_SHARE_NAME=aksshare  
 
 # Create a resource group
 az group create --name $AKS_PERS_RESOURCE_GROUP --location $AKS_PERS_LOCATION
