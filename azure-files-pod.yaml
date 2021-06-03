@@ -20,7 +20,7 @@ spec:
   - name: azure
     persistentVolumeClaim:
       claimName: azurefile
-    azureFile:
-      secretName: azure-secret
-      shareName: aksshare
-      readOnly: false
+        azureFile:
+          secretName: azure-secret
+          shareName: aksshare
+          readOnly: false
