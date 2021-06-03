@@ -28,30 +28,5 @@ echo Storage account key: $STORAGE_KEY
 kubectl create secret generic azure-secret --from-literal=azurestorageaccountname=$AKS_PERS_STORAGE_ACCOUNT_NAME --from-literal=azurestorageaccountkey=$STORAGE_KEY
 
 # Mount file share as an inline volume
-## Create a yaml azure-files-pod.yaml
-
-apiVersion: v1
-kind: Pod
-metadata:
-  name: mypod
-spec:
-  containers:
-  - image: mcr.microsoft.com/oss/nginx/nginx:1.15.5-alpine
-    name: mypod
-    resources:
-      requests:
-        cpu: 100m
-        memory: 128Mi
-      limits:
-        cpu: 250m
-        memory: 256Mi
-    volumeMounts:
-      - name: azure
-        mountPath: /mnt/azure
-  volumes:
-  - name: azure
-    azureFile:
-      secretName: azure-secret
-      shareName: aksshare
-      readOnly: false
-
+## Create a yaml azure-files-pod.yaml  
+kubectl apply -f azure-files-pod.yaml
