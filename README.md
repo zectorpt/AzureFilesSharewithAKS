@@ -21,5 +21,5 @@ az storage share create -n $AKS_PERS_SHARE_NAME --connection-string $AZURE_STORA
 STORAGE_KEY=$(az storage account keys list --resource-group $AKS_PERS_RESOURCE_GROUP --account-name $AKS_PERS_STORAGE_ACCOUNT_NAME --query "[0].value" -o tsv)
 
 # Echo storage account name and key
-echo Storage account name: $AKS_PERS_STORAGE_ACCOUNT_NAME
+echo Storage account name: $AKS_PERS_STORAGE_ACCOUNT_NAME  
 echo Storage account key: $STORAGE_KEY
